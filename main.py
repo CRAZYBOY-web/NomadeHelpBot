@@ -8,7 +8,6 @@
 # License: Custom Open-Source (Credits must remain; strictly no resale)
 # ============================================================
 
-
 import os
 import logging
 import threading
@@ -17,37 +16,45 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from pyrogram import Client
 from config import API_ID, API_HASH, BOT_TOKEN
 from handlers import register_all_handlers
+
+# Import the database object from db.py
 from db import db
 
 #  LOGGING 
 logging.basicConfig(level=logging.INFO)
 
-#  WEB SERVER (RENDER FIX) 
-PORT = int(os.environ.get("PORT", 10000))
+#  WEB SERVER (FOR RAILWAY/RENDER FIX) 
+# Railway usually provides a PORT variable automatically
+PORT = int(os.environ.get("PORT", 8080))
 
 class HealthHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(b"Nomade Help Bot is running")
+        self.wfile.write(b"Pikachuu Group Manager Bot is running")
 
 def start_web_server():
-    server = HTTPServer(("0.0.0.0", PORT), HealthHandler)
-    logging.info(f"Web server running on port {PORT}")
-    server.serve_forever()
+    try:
+        server = HTTPServer(("0.0.0.0", PORT), HealthHandler)
+        logging.info(f"Health check server running on port {PORT}")
+        server.serve_forever()
+    except Exception as e:
+        logging.error(f"Web server failed: {e}")
 
+# Start web server in background to prevent Railway from timing out
 threading.Thread(target=start_web_server, daemon=True).start()
 
 #  TELEGRAM BOT 
 app = Client(
-    "group_manager_bot",
+    "pikachuu_bot",
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN
 )
 
+# Register all moderation and welcome handlers
 register_all_handlers(app)
 
-print("Bot is starting...")
-
-app.run()
+if __name__ == "__main__":
+    print("༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ Bot is starting...")
+    app.run()
