@@ -9,19 +9,32 @@
 # ============================================================
 
 import os
+from dotenv import load_dotenv
 
-# Required configurations (loaded from environment variables)
-API_ID = int(os.getenv("API_ID", 0))
-API_HASH = os.getenv("API_HASH", "")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "")
-MONGO_URI = os.getenv("MONGO_URI", "")
-DB_NAME = os.getenv("DB_NAME", "Cluster0")
+# Load .env file if it exists (for local testing)
+load_dotenv()
 
-# Owner and bot details
-OWNER_ID = int(os.getenv("OWNER_ID", 0))
-BOT_USERNAME = os.getenv("BOT_USERNAME", "NomadeHelpBot")
+# --- Telegram API Config ---
+API_ID = int(os.environ.get("API_ID", 0))
+API_HASH = os.environ.get("API_HASH", "")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
-# Links and visuals
-SUPPORT_GROUP = os.getenv("SUPPORT_GROUP", "https://t.me/LearningBotsCommunity")
-UPDATE_CHANNEL = os.getenv("UPDATE_CHANNEL", "https://t.me/Learning_Bots")
-START_IMAGE = os.getenv("START_IMAGE", "https://files.catbox.moe/j2yhce.jpg")
+# --- Database Config ---
+MONGO_URI = os.environ.get("MONGO_URI", "")
+DB_NAME = os.environ.get("DB_NAME", "PikachuuDB")
+
+# --- Owner and Bot Info ---
+OWNER_ID = int(os.environ.get("OWNER_ID", 5000520402))
+BOT_USERNAME = os.environ.get("BOT_USERNAME", "PikachuuHelpBot")
+
+# --- Custom Links & Visuals ---
+SUPPORT_GROUP = os.environ.get("SUPPORT_GROUP", "https://t.me/+UhZo8ZsUECYyYWI1")
+UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "https://t.me/pikachuu_updates")
+START_IMAGE = os.environ.get("START_IMAGE", "https://files.catbox.moe/9qftmz.jpg")
+
+# Simple validation check
+if not API_ID or not API_HASH or not BOT_TOKEN:
+    print("⚠️ WARNING: API_ID, API_HASH, or BOT_TOKEN is missing in environment variables!")
+
+if not MONGO_URI:
+    print("⚠️ WARNING: MONGO_URI is missing! MongoDB features will not work.")
