@@ -130,4 +130,4 @@ python3 main.py
 
 Support Group: https://t.me/+UhZo8ZsUECYyYWI1
 
-Update Channel: @pikachuu_updates
+Update Channel: https://t.me/pikachuu_updates
