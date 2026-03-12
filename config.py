@@ -9,32 +9,29 @@
 # ============================================================
 
 import os
-from dotenv import load_dotenv
-
-# Load .env file if it exists (for local testing)
-load_dotenv()
 
 # --- Telegram API Config ---
+# These are retrieved from Railway's Variables tab
 API_ID = int(os.environ.get("API_ID", 0))
 API_HASH = os.environ.get("API_HASH", "")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
 # --- Database Config ---
+# Ensure the variable name in Railway is exactly MONGO_URI
 MONGO_URI = os.environ.get("MONGO_URI", "")
 DB_NAME = os.environ.get("DB_NAME", "PikachuuDB")
 
-# --- Owner and Bot Info ---
-OWNER_ID = int(os.environ.get("OWNER_ID", 5000520402))
-BOT_USERNAME = os.environ.get("BOT_USERNAME", "PikachuuHelpBot")
+# --- Owner and Bot Details ---
+OWNER_ID = int(os.environ.get("OWNER_ID", "5000520402")
+BOT_USERNAME = os.environ.get("BOT_USERNAME", "PikachuuX_Bot")
 
 # --- Custom Links & Visuals ---
 SUPPORT_GROUP = os.environ.get("SUPPORT_GROUP", "https://t.me/+UhZo8ZsUECYyYWI1")
 UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "https://t.me/pikachuu_updates")
 START_IMAGE = os.environ.get("START_IMAGE", "https://files.catbox.moe/9qftmz.jpg")
 
-# Simple validation check
-if not API_ID or not API_HASH or not BOT_TOKEN:
-    print("⚠️ WARNING: API_ID, API_HASH, or BOT_TOKEN is missing in environment variables!")
-
+# --- Validation Log (Visible in Railway Logs) ---
 if not MONGO_URI:
-    print("⚠️ WARNING: MONGO_URI is missing! MongoDB features will not work.")
+    print("❌ SYSTEM ALERT: MONGO_URI variable is empty in config.py")
+else:
+    print("✅ SYSTEM INFO: MONGO_URI has been loaded from environment")
