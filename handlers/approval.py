@@ -2,6 +2,8 @@ from pyrogram import Client, filters
 from pyrogram.types import ChatJoinRequest
 from db import get_approval
 
+def register_approval_handlers(app):
+    pass
 @Client.on_chat_join_request()
 async def approval_handler(client, request: ChatJoinRequest):
     chat_id = request.chat.id
