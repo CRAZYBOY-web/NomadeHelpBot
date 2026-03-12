@@ -8,20 +8,32 @@
 # License: Custom Open-Source (Credits must remain; strictly no resale)
 # ============================================================
 
-# ... (your existing imports)
+import os
+import logging
+import threading
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from pyrogram import Client
 
+# 1. IMPORT THESE FIRST
+from config import API_ID, API_HASH, BOT_TOKEN
+from handlers import register_all_handlers
+from db import db
+
+# 2. NOW YOU CAN RUN THE CHECK
 if __name__ == "__main__":
-    # Internal check to ensure basic config is present
     if not API_ID or not API_HASH or not BOT_TOKEN:
         print("❌ CRITICAL ERROR: API_ID, API_HASH, or BOT_TOKEN is missing!")
-        exit(1)
-
+        # We don't exit here so the web server can still respond to Railway
+    
+    # Rest of your start logic...
     print("༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ Bot is starting...")
     
-    # Check if DB is connected (Optional but helpful for debugging)
-    if db is None:
-        print("⚠️ WARNING: Bot is starting in OFFLINE mode (No Database).")
-    else:
-        print("✅ Database connection detected.")
+    app = Client(
+        "pikachuu_bot",
+        api_id=API_ID,
+        api_hash=API_HASH,
+        bot_token=BOT_TOKEN
+    )
 
+    register_all_handlers(app)
     app.run()
