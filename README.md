@@ -119,8 +119,15 @@ python3 main.py
 
 📱 Connect with Me
 <p align="center">
-<a href="https://t.me/+UhZo8ZsUECYyYWI1"><img src="https://img.shields.io/badge/Telegram%20Group-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"></a>
-<a href="https://t.me/pikachuu_updates"><img src="https://img.shields.io/badge/Telegram%20Channel-0088cc?style=for-the-badge&logo=telegram&logoColor=white"></a>
+  <a href="https://t.me/user?id=5000520402">
+    <img src="https://img.shields.io/badge/Author-black?style=for-the-badge&logo=telegram&logoColor=white">
+  </a>
+  <a href="https://t.me/+UhZo8ZsUECYyYWI1">
+    <img src="https://img.shields.io/badge/Telegram%20Group-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">
+  </a>
+  <a href="https://t.me/pikachuu_updates">
+    <img src="https://img.shields.io/badge/Telegram%20Channel-0088cc?style=for-the-badge&logo=telegram&logoColor=white">
+  </a>
 </p>
 
 Support Group: ༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ Support
