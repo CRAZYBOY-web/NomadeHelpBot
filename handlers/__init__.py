@@ -1,3 +1,9 @@
+# ============================================================
+# Group Manager Bot
+# Support: https://t.me/+UhZo8ZsUECYyYWI1
+# Channel: https://t.me/pikachuu_updates
+# ============================================================
+
 from .start import register_handlers
 from .group_commands import register_group_commands
 
