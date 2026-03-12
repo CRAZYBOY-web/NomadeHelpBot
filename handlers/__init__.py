@@ -1,6 +1,6 @@
 # ============================================================
 # ༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ Group Manager Bot
-# Modified/Maintained by ID: 5000520402
+# Modified/Maintained by: ⏤͟͟ 𝑪𝒓𝒂𝒛𝒚࿐𝑩𝒐𝒚 亗
 #
 # Support: https://t.me/+UhZo8ZsUECYyYWI1
 # Channel: https://t.me/pikachuu_updates
