@@ -2,6 +2,10 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from db import set_welcome_status, set_welcome_message
 
+def register_welcome_handlers(app):
+    # This remains empty because we use decorators (@Client.on_message)
+    # But it MUST exist so __init__.py doesn't crash the bot.
+    pass
 # --- Command: Toggle Welcome On/Off ---
 @Client.on_message(filters.command("welcome") & filters.group)
 async def toggle_welcome(client, message: Message):
