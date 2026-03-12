@@ -1,3 +1,12 @@
+# ============================================================
+# Group Manager Bot
+# Author: learningbots79 (https://github.com/learningbots79)
+# Support: https://t.me/LearningBotsCommunity
+# Channel: https://t.me/learning_bots
+# YouTube: https://youtube.com/@learning_bots
+# License: Open-source (keep credits, no resale)
+# ============================================================
+
 import os
 import logging
 import threading
