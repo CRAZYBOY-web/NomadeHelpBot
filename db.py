@@ -1,10 +1,11 @@
 # ============================================================
-#Group Manager Bot
-# Author: LearningBotsOfficial (https://github.com/LearningBotsOfficial) 
-# Support: https://t.me/LearningBotsCommunity
-# Channel: https://t.me/learning_bots
-# YouTube: https://youtube.com/@learning_bots
-# License: Open-source (keep credits, no resale)
+# ༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ Group Manager Bot
+# Modified/Maintained by: ⏤͟͟ 𝑪𝒓𝒂𝒛𝒚࿐𝑩𝒐𝒚 亗
+#
+# Support: https://t.me/+UhZo8ZsUECYyYWI1
+# Channel: https://t.me/pikachuu_updates
+#
+# License: Custom Open-Source (Credits must remain; strictly no resale)
 # ============================================================
 
 import motor.motor_asyncio
