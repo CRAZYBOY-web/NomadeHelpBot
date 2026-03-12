@@ -2,6 +2,9 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from db import get_antilink, set_antilink
 
+def register_moderation_handlers(app):
+    pass
+    
 @Client.on_message(filters.group & ~filters.service, group=-1)
 async def antilink_handler(client, message: Message):
     if not message.text or not await get_antilink(message.chat.id):
