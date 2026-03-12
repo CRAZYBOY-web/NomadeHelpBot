@@ -117,7 +117,8 @@ python3 main.py
 
 </details>
 
-📱 Connect with Me
+## 📱 Connect with Me
+
 <p align="center">
   <a href="https://t.me/user?id=5000520402">
     <img src="https://img.shields.io/badge/Author-black?style=for-the-badge&logo=telegram&logoColor=white">
