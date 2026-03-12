@@ -1,18 +1,18 @@
-Gemini said
+༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ said
 <div align="center">
 
 <a href="https://files.catbox.moe/9qftmz.jpg">
 <img src="https://files.catbox.moe/9qftmz.jpg" width="300" height="300" />
 </a>
 
-A Group Manager Bot built with Pyrogram + MongoDB for managing Telegram groups
+༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ said: This is a Group Manager Bot built with Pyrogram + MongoDB for managing Telegram groups.
 
 </div>
 
 <details>
 <summary><b>🔗 Official ༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ Links</b></summary>
 
-This repository contains the basic open-source edition of ༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ Help Bot.
+This repository contains the basic open-source edition of the ༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ Help Bot.
 
 For the fully upgraded & officially maintained version, use the links below.
 
@@ -55,7 +55,6 @@ We are going to host this bot on Render. To deploy it, we need to change a few c
 <a href="https://youtu.be/35zzgtJIw8Q?si=d6eNOWxyutTlHgMz" target="_blank">
 <img src="https://img.shields.io/badge/Watch%20Tutorial-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Tutorial">
 </a>
-
 </p>
 
 </details>
@@ -71,21 +70,25 @@ Then click Star ⭐ to support this project!
 2. Get Your Fork URL
 https://github.com/<your-username>/NomadeHelpBot.git
 3. Setup Your VPS
-Install system packages:
-
+Bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y git python3 python3-pip python3-venv tmux nano
 4. Clone Your Fork
+Bash
 git clone https://github.com/<your-username>/NomadeHelpBot.git
 cd Nomade
 python3 -m venv venv
 source venv/bin/activate
 5. Install Dependencies
+Bash
 pip install --upgrade pip && pip install -r requirements.txt
 6. Configure the Bot
+Bash
+# Edit your environment variables
 nano .env
-⚙️ required fields
+⚙️ Required Fields
 
+Ini, TOML
 # Telegram API
 API_ID=
 API_HASH=
@@ -103,12 +106,12 @@ BOT_USERNAME=PikachuuHelpBot
 SUPPORT_GROUP=https://t.me/LearningBotsCommunity
 UPDATE_CHANNEL=https://t.me/LearningBotsOfficial
 START_IMAGE=https://files.catbox.moe/9qftmz.jpg
-
 ✅ Save with: Ctrl + O, then Enter
 
 ❌ Exit with: Ctrl + X
 
 7. Run the Bot
+Bash
 tmux new -s groupbot
 source venv/bin/activate
 python3 main.py
@@ -116,7 +119,6 @@ python3 main.py
 
 </details>
 
----------------------
 📱 Connect with Me
 <p align="center">
 <a href="https://www.instagram.com/learning_bots"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
@@ -125,40 +127,7 @@ python3 main.py
 <a href="https://youtube.com/@learning_bots?si=aNUuRSfZD7na78GM"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
 </p>
 
-⚠️ License / Usage Terms
-This project is open-source under a custom license by Yash.
 
-✅ You Can:
+Support Group: https://t.me/+UhZo8ZsUECYyYWI1
 
-Use this code for personal or educational purposes
-
-Host your own version with proper credits - Modify or improve the code (while keeping credit intact)
-
-🚫 You Cannot:
-
-Remove author credits or change project name
-
-Sell, rent, or resell this code or any modified version
-
-Claim ownership or re-upload it without permission
-
-If you want to use this project commercially,
-
-please contact the author at LearningBotsOfficial.
-
-Author: LearningBotsOfficial
-
-Support Group: @LearningBotsCommunity
-
-Update Channel: @learning_bots
-
-YouTube: Learning Bots
-
-<div align="center">
-
----------------------
-<a href="https://files.catbox.moe/wpaoo2.jpg" target="_blank">
-<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="45" width="190" alt="Buy Me a Coffee" />
-</a>
-
-</div>
+Update Channel: @pikachuu_updates
