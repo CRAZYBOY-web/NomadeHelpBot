@@ -22,24 +22,33 @@ if not MONGO_URI or not str(MONGO_URI).strip():
     logging.error("❌ MONGO_URI is missing! MongoDB features will be disabled.")
 else:
     try:
-        # Initialize the Async client
         client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_URI)
         db = client[DB_NAME]
-        logging.info("✅ MongoDB connected successfully!")
+        logging.info("✅ MongoDB connection initialized.")
     except Exception as e:
-        logging.error(f"❌ Failed to connect to MongoDB: {e}")
-        db = None
+        logging.error(f"❌ MongoDB Error: {e}")
 
 # ==========================================================
 # 🟢 DATABASE FUNCTIONS (Safety Protected)
 # ==========================================================
 
-# --- User Management ---
-async def add_user(user_id, first_name):
+# --- Anti-Link Functions (REQUIRED FOR MODERATION.PY) ---
+async def set_antilink(chat_id, status: bool):
+    """Turns Anti-Link ON or OFF in the database"""
     if db is None: return
-    await db.users.update_one({"user_id": user_id}, {"$set": {"first_name": first_name}}, upsert=True)
+    await db.settings.update_one(
+        {"chat_id": chat_id}, 
+        {"$set": {"antilink": status}}, 
+        upsert=True
+    )
 
-# --- Welcome System Functions ---
+async def get_antilink(chat_id):
+    """Checks if Anti-Link is ON or OFF"""
+    if db is None: return False
+    data = await db.settings.find_one({"chat_id": chat_id})
+    return data.get("antilink", False) if data else False
+
+# --- Welcome Functions ---
 async def set_welcome_status(chat_id, status: bool):
     if db is None: return
     await db.settings.update_one({"chat_id": chat_id}, {"$set": {"welcome_enabled": status}}, upsert=True)
@@ -58,17 +67,7 @@ async def get_welcome_message(chat_id):
     data = await db.settings.find_one({"chat_id": chat_id})
     return data.get("welcome_text") if data else None
 
-# --- Anti-Link Functions ---
-async def set_antilink(chat_id, status: bool):
-    if db is None: return
-    await db.settings.update_one({"chat_id": chat_id}, {"$set": {"antilink": status}}, upsert=True)
-
-async def get_antilink(chat_id):
-    if db is None: return False
-    data = await db.settings.find_one({"chat_id": chat_id})
-    return data.get("antilink", False) if data else False
-
-# --- Approval System Functions ---
+# --- Approval Functions ---
 async def set_approval(chat_id, status: bool):
     if db is None: return
     await db.settings.update_one({"chat_id": chat_id}, {"$set": {"approval": status}}, upsert=True)
@@ -77,3 +76,8 @@ async def get_approval(chat_id):
     if db is None: return False
     data = await db.settings.find_one({"chat_id": chat_id})
     return data.get("approval", False) if data else False
+
+# --- User Management ---
+async def add_user(user_id, first_name):
+    if db is None: return
+    await db.users.update_one({"user_id": user_id}, {"$set": {"first_name": first_name}}, upsert=True)
