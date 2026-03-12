@@ -1,4 +1,4 @@
-༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ said
+༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ SAID 
 <div align="center">
 
 <a href="https://files.catbox.moe/9qftmz.jpg">
@@ -20,10 +20,10 @@ For the fully upgraded & officially maintained version, use the links below.
 <a href="https://t.me/PikachuuHelpBot">
 <img src="https://img.shields.io/badge/🤖%20Official%20Bot-Open-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">
 </a>
-<a href="https://t.me/NomadeOfficial">
+<a href="https://t.me/pikachuu_updates">
 <img src="https://img.shields.io/badge/📢%20Updates-Channel-0088cc?style=for-the-badge&logo=telegram&logoColor=white">
 </a>
-<a href="https://t.me/NomadeSupport">
+<a href="https://t.me/+UhZo8ZsUECYyYWI1">
 <img src="https://img.shields.io/badge/🆘%20Support-Group-229ED9?style=for-the-badge&logo=telegram&logoColor=white">
 </a>
 </p>
@@ -45,7 +45,6 @@ MongoDB Storage for data persistence
 
 Beautiful Inline UI and modular codebase
 
----------------------
 <details>
 <summary><b>🔸 Free Hosting</b></summary>
 
@@ -84,7 +83,6 @@ Bash
 pip install --upgrade pip && pip install -r requirements.txt
 6. Configure the Bot
 Bash
-# Edit your environment variables
 nano .env
 ⚙️ Required Fields
 
@@ -103,8 +101,8 @@ OWNER_ID=
 BOT_USERNAME=PikachuuHelpBot
 
 # Links & Visuals
-SUPPORT_GROUP=https://t.me/LearningBotsCommunity
-UPDATE_CHANNEL=https://t.me/LearningBotsOfficial
+SUPPORT_GROUP=https://t.me/+UhZo8ZsUECYyYWI1
+UPDATE_CHANNEL=https://t.me/pikachuu_updates
 START_IMAGE=https://files.catbox.moe/9qftmz.jpg
 ✅ Save with: Ctrl + O, then Enter
 
@@ -115,19 +113,16 @@ Bash
 tmux new -s groupbot
 source venv/bin/activate
 python3 main.py
-➡️ Detach (keep it running): Ctrl + B, then D
+➡️ Detach: Ctrl + B, then D
 
 </details>
 
 📱 Connect with Me
 <p align="center">
-<a href="https://www.instagram.com/learning_bots"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
-<a href="https://t.me/LearningBotsCommunity"><img src="https://img.shields.io/badge/Telegram%20Group-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"></a>
-<a href="https://t.me/learning_bots"><img src="https://img.shields.io/badge/Telegram%20Channel-0088cc?style=for-the-badge&logo=telegram&logoColor=white"></a>
-<a href="https://youtube.com/@learning_bots?si=aNUuRSfZD7na78GM"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
+<a href="https://t.me/+UhZo8ZsUECYyYWI1"><img src="https://img.shields.io/badge/Telegram%20Group-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"></a>
+<a href="https://t.me/pikachuu_updates"><img src="https://img.shields.io/badge/Telegram%20Channel-0088cc?style=for-the-badge&logo=telegram&logoColor=white"></a>
 </p>
 
+Support Group: ༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ Support
 
-Support Group: https://t.me/+UhZo8ZsUECYyYWI1
-
-Update Channel: https://t.me/pikachuu_updates
+Update Channel: ༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ Updates
