@@ -1,14 +1,10 @@
 # ============================================================
 # ༒ ᴘɪᴋᴀᴄʜᴜᴜ ༒ Group Manager Bot
 # Modified/Maintained by: ⏤͟͟ 𝑪𝒓𝒂𝒛𝒚࿐𝑩𝒐𝒚 亗
-#
-# Support: https://t.me/+UhZo8ZsUECYyYWI1
-# Channel: https://t.me/pikachuu_updates
-#
-# License: Custom Open-Source (Credits must remain; strictly no resale)
 # ============================================================
 pyrogram==2.0.106
 tgcrypto==1.2.5
 motor==3.1.1
 pymongo[srv]==4.6.3
-
+python-dotenv==1.0.0
+aiohttp==3.9.1
